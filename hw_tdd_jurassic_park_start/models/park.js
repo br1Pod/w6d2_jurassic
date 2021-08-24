@@ -1,4 +1,4 @@
-const Park = function (name, price, dinosaurs) {
+const Park = function (name, price) {
     this.name = name
     this.price = price
     this.dinosaurs = []

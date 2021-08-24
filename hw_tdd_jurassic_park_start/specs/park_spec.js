@@ -5,13 +5,13 @@ const Dinosaur = require('../models/dinosaur.js');
 describe('Park', function() {
 
   let park;
-  let dino1 = ('t-rex', 'carnivore', 80);
-  let dino2 = ('diplodoculous', 'herbivore', 30);
-  let dino3 = ('stegosaurus', 'herbivore', 45)
-
+  let dino1 = new Dinosaur ('t-rex', 'carnivore', 80);
+  let dino2 = new Dinosaur ('diplodoculous', 'herbivore', 30);
+  let dino3 = new Dinosaur ('stegosaurus', 'herbivore', 45)
+  let dinoList = [dino1, dino2, dino3]
   
   beforeEach(function () {
-    park = new Park('JS_sic Park', 25, [dino1, dino2, dino3]);
+    park = new Park('JS_sic Park', 25, dinoList);
 
   })
 
@@ -25,20 +25,25 @@ describe('Park', function() {
     assert.strictEqual(actual, 25)
   });
 
-  it('should have a collection of dinosaurs');
+  describe('dinosaurs', function (){
+    
+    it('should have a collection of dinosaurs', function() {
+    const actual = park.dinosaurs
+    assert.deepStrictEqual(actual, [])
+    });
 
-  it('should be able to add a dinosaur to its collection');
+    it('should be able to add a dinosaur to its collection');
 
-  it('should be able to remove a dinosaur from its collection');
+    it('should be able to remove a dinosaur from its collection');
 
-  it('should be able to find the dinosaur that attracts the most visitors');
+    it('should be able to find the dinosaur that attracts the most visitors');
 
-  it('should be able to find all dinosaurs of a particular species');
+    it('should be able to find all dinosaurs of a particular species');
 
-  it('should be able to calculate the total number of visitors per day');
+    it('should be able to calculate the total number of visitors per day');
 
-  it('should be able to calculate the total number of visitors per year');
+    it('should be able to calculate the total number of visitors per year');
 
-  it('should be able to calculate total revenue for one year');
-
+    it('should be able to calculate total revenue for one year');
+  })
 });
