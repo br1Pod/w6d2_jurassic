@@ -4,11 +4,21 @@ const Dinosaur = require('../models/dinosaur.js');
 
 describe('Park', function() {
 
+  let park;
+  let dino1 = ('t-rex', 'carnivore', 80);
+  let dino2 = ('diplodoculous', 'herbivore', 30);
+  let dino3 = ('stegosaurus', 'herbivore', 45)
+
+  
   beforeEach(function () {
+    park = new Park('JS_sic Park', 25, [dino1, dino2, dino3]);
 
   })
 
-  it('should have a name');
+  it('should have a name', function() {
+    const actual = park.name
+    assert.strictEqual(actual, 'JS_sic Park');
+  });
 
   it('should have a ticket price');
 
