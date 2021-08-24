@@ -12,4 +12,8 @@ Park.prototype.collectionSize = function () {
     return this.dinosaurs.length;
 }
 
+Park.prototype.removeDino = function (dinoOut) {
+    this.dinosaurs.pop(dinoOut);
+}
+
 module.exports = Park;
