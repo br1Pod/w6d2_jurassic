@@ -18,11 +18,20 @@ Park.prototype.removeDino = function (dinoOut) {
 
 Park.prototype.starAttraction = function () {
     let starDino = this.dinosaurs[0];
-    for (dino in this.dinosaurs) {
+    for (dino of this.dinosaurs) {
         if (dino.guestsAttractedPerDay > starDino.guestsAttractedPerDay) {
             starDino = dino
         }
     }
     return starDino
 }
+
+Park.prototype.countSpeciies = function () {
+    
+}
+
+
+
+
 module.exports = Park;
+

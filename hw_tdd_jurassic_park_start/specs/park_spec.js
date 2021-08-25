@@ -53,11 +53,18 @@ describe('Park', function() {
       park.addDino(dino3)
 
       const actual = park.starAttraction()
-      assert.deepStrictEqual(actual, 'pteranodon')
+      assert.strictEqual(actual, dino3)
     });
 
     it('should be able to find all dinosaurs of a particular species', function () {
-
+      let dino1 = new Dinosaur('triceratops', 'herbivore', 55);
+      let dino2 = new Dinosaur('brontosaurus', 'herbivore', 50);
+      let dino3 = new Dinosaur('pteranodon', 'carnivore', 60);
+      let dino4 = new Dinosaur('pteranodon', 'carnivore', 35);
+      let dino5 = new Dinosaur('pteranodon', 'carnivore', 42);
+      park.addDino(dino1)
+      park.addDino(dino2)
+      park.addDino(dino3)
     });
 
     it('should be able to calculate the total number of visitors per day');
