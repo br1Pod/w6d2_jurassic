@@ -73,7 +73,12 @@ describe('Park', function() {
     });
 
     it('should be able to calculate the total number of visitors per day', function () {
-      
+      park.addDino(dino1)
+      park.addDino(dino2)
+      park.addDino(dino3)
+
+      const actual = park.totalVisitors();
+      assert.strictEqual(actual, 155)
     });
 
     it('should be able to calculate the total number of visitors per year');
