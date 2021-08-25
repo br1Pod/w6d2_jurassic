@@ -65,9 +65,16 @@ describe('Park', function() {
       park.addDino(dino1)
       park.addDino(dino2)
       park.addDino(dino3)
+      park.addDino(dino4)
+      park.addDino(dino5)
+
+      const actual = park.countSpecies('pteranodon')
+      assert.deepStrictEqual(actual, [dino3, dino4, dino5])
     });
 
-    it('should be able to calculate the total number of visitors per day');
+    it('should be able to calculate the total number of visitors per day', function () {
+      
+    });
 
     it('should be able to calculate the total number of visitors per year');
 

@@ -26,8 +26,14 @@ Park.prototype.starAttraction = function () {
     return starDino
 }
 
-Park.prototype.countSpeciies = function () {
-    
+Park.prototype.countSpecies = function (species) {
+    let newList = [] 
+    for (dino of this.dinosaurs) {
+        if (dino.species === species) {
+            newList.push(dino)
+        }
+    }
+    return newList
 }
 
 
